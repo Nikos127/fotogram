@@ -1,0 +1,36 @@
+*{
+    margin: 0;
+    color: white;
+}
+header {
+    display: flex;
+    align-items: center;
+    padding-left: 100px;
+    background-color: #09212A;
+    height: 80px;
+}
+
+header img{
+    height: 40px;
+    width: 200px;
+}
+
+h1{
+    font-size: 56px;
+}
+
+main {
+    background-color: #06171E;
+    height: 100vh;
+}
+
+footer {
+    display: flex;
+    height: 120px;
+    background-image: url(img/Footer.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-color: #06171E;
+}
+
