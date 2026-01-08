@@ -53,28 +53,44 @@ main {
     height: 150px;
     border-radius: 15px;
     border: 2px solid #124658;
+    object-fit: cover;
 }
 
 .content img:hover {
     cursor: pointer;
 }
 
-.overlay {
+#resp_image {
+    display: none;
+}
+
+#resp_image.overlay {
+    display: flex;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    position: fixed;
+    position: absolute;
     min-height: 70vh;
-    width: 30vw;
+    max-height: 80vh;
+    width: 40vw;
     min-width: 500px;
     background-color: #06171E;
     border: 2px solid #124658;
     border-radius: 24px;
+    flex-direction: row;
 }
 
-.resp_image img {
-    height: 150px;
-    width: 150px;
+#resp_image.overlay img {
+    position: absolute;
+    padding: 200px 20px;
+    object-fit: cover;
+    height: 360px;
+    width: 560px;
+}
+
+.overlayFoto img{
+    height: 32px;
+    width: 32px;
 }
 
 footer {
