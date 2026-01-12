@@ -28,10 +28,10 @@ let fotos = [
     "./img/zakynthos-1583095_1280.jpg"
 ]
 function fotosFiltered(index) {
-    resp_overlay(event, index);
+    resp_overlay(index);
 }
 
-function resp_overlay(event, index) {
+function resp_overlay(index) {
     document.getElementById('resp_image').classList.add('overlay');
     document.getElementById('cloudy').classList.add('cloudy');
     event.stopPropagation();
@@ -59,7 +59,7 @@ function getOverlayContent(i, l) {
             </div>
             <div class="overlayArows">
                 <img onclick="fotosForw()" src="./img/Button left.png" alt="arrow_point_left">
-                <p id="counter">${[i + 1]}/${[l]}</p>
+                <p class="counter">${[i + 1]}/${[l]}</p>
                 <img src="./img/Button right.png" alt="arrow_point_right">
             </div>
         </div>`

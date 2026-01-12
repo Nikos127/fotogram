@@ -116,6 +116,10 @@ main {
     height: 60px !important;
 }
 
+.counter {
+    margin-top: 24px;
+}
+
 footer {
     display: flex;
     height: 120px;
