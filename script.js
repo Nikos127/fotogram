@@ -39,9 +39,10 @@ function resp_overlay(event, index) {
     let overlayRef = document.getElementById('resp_image');
     overlayRef.innerHTML = "";
     let i = index;
+    let l = length.fotos;
+
     overlayRef.innerHTML = getOverlayContent(i, fotoTitles, fotos);
 }
-
 
 function getOverlayContent(i) {
     return `<div>
@@ -57,7 +58,9 @@ function getOverlayContent(i) {
                 <img src="${fotos[i]}" alt=""></img>
             </div>
             <div class="overlayArows">
-                <img src="./img/" alt="">
+                <img src="./img/Button left.png" alt="arrow_point_left">
+                <p id="counter">${[i + 1]}/</p>
+                <img src="./img/Button right.png" alt="arrow_point_right">
             </div>
         </div>`
 }

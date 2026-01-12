@@ -81,26 +81,22 @@ main {
 }
 
 #resp_image.overlay img {
-<<<<<<< HEAD
     margin: 0 auto;
     padding-top: 20px;
     display: flex;
-=======
-    padding: 200px 20px;
->>>>>>> c68b9251eec869b67fa423cd1f241f0e3d4866f4
     object-fit: cover;
-    height: 360px;
-    width: 560px;
+    width: 80%;
+    height: 380px;
 }
 
-<<<<<<< HEAD
 .overlayHeader {
     margin-top: 80px;
-    padding: 0 20px;
+    padding: 0 10%;
     display: flex;
     justify-content: space-between;
     flex-direction: row;
     align-items: center;
+
 }
 
 .overlayClose img {
@@ -108,8 +104,18 @@ main {
     height: 32px !important;
 }
 
-=======
->>>>>>> c68b9251eec869b67fa423cd1f241f0e3d4866f4
+.overlayArows {
+    font-size: 24px;
+    padding: 10px;
+    display: flex;
+    align-items: center;
+}
+
+.overlayArows img {
+    width: 60px !important;
+    height: 60px !important;
+}
+
 footer {
     display: flex;
     height: 120px;
