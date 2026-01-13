@@ -160,6 +160,10 @@ footer {
 
 @media(max-width: 550px) {
 
+    body.overlay {
+        overflow: hidden;
+    }
+
     html {
         scroll-behavior: smooth;
     }
