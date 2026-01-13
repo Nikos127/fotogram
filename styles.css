@@ -159,6 +159,11 @@ footer {
 }
 
 @media(max-width: 550px) {
+
+    html {
+        scroll-behavior: smooth;
+    }
+
     #resp_image.overlay {
         display: flex;
         top: 50%;

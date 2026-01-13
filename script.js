@@ -28,6 +28,7 @@ let fotos = [
     "./img/zakynthos-1583095_1280.jpg"
 ]
 function fotosFiltered(index) {
+    window.scrollTo(0, 0);
     resp_overlay(index);
 }
 
