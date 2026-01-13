@@ -33,7 +33,7 @@ main {
     display: flex;
     flex-direction: column;
     align-items: center;
-    width: 85%;
+    width: 95%;
 }
 
 .cloudy {
@@ -166,7 +166,7 @@ footer {
     }
 
     main{
-        padding: 0;
+        padding: 40px 0;
         margin: 0;
     }
 
