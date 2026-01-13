@@ -25,7 +25,7 @@ main {
     justify-content: center;
     align-items: center;
     background-color: #06171E;
-    min-height: 80vh;
+    min-height: 70vh;
     padding: 40px 0;
 }
 
@@ -104,6 +104,10 @@ main {
     height: 32px !important;
 }
 
+.overlayClose img:hover{
+    cursor: pointer;
+}
+
 .overlayArows {
     font-size: 24px;
     padding: 10px;
@@ -114,6 +118,11 @@ main {
 .overlayArows img {
     width: 60px !important;
     height: 60px !important;
+}
+
+.overlayArows img:hover{
+    cursor: pointer;
+    filter: brightness(1.5);
 }
 
 .counter {

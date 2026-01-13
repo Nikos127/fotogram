@@ -31,6 +31,28 @@ function fotosFiltered(index) {
     resp_overlay(index);
 }
 
+function nextFoto(i, l) {
+    if (i >= l - 1) {
+        i = 0;
+        resp_overlay(i);
+    }
+    else {
+        i++;
+        resp_overlay(i);
+    }
+}
+
+function prewFoto(i, l) {
+    if (i <= 0) {
+        i = 11;
+        resp_overlay(i);
+    }
+    else {
+        i--;
+        resp_overlay(i);
+    }
+}
+
 function resp_overlay(index) {
     document.getElementById('resp_image').classList.add('overlay');
     document.getElementById('cloudy').classList.add('cloudy');
@@ -40,7 +62,6 @@ function resp_overlay(index) {
     overlayRef.innerHTML = "";
     let i = index;
     let l = fotos.length;
-
     overlayRef.innerHTML = getOverlayContent(i, l);
 }
 
@@ -58,9 +79,9 @@ function getOverlayContent(i, l) {
                 <img src="${fotos[i]}" alt=""></img>
             </div>
             <div class="overlayArows">
-                <img onclick="fotosForw()" src="./img/Button left.png" alt="arrow_point_left">
+                <img onclick="prewFoto(${[i]},${[l]})" src="./img/Button left.png" alt="arrow_point_left">
                 <p class="counter">${[i + 1]}/${[l]}</p>
-                <img src="./img/Button right.png" alt="arrow_point_right">
+                <img onclick="nextFoto(${[i]},${[l]})" src="./img/Button right.png" alt="arrow_point_right">
             </div>
         </div>`
 }
