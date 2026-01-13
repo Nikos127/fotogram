@@ -104,7 +104,7 @@ main {
     height: 32px !important;
 }
 
-.overlayClose img:hover{
+.overlayClose img:hover {
     cursor: pointer;
 }
 
@@ -120,7 +120,7 @@ main {
     height: 60px !important;
 }
 
-.overlayArows img:hover{
+.overlayArows img:hover {
     cursor: pointer;
     filter: brightness(1.5);
 }
@@ -137,4 +137,98 @@ footer {
     background-repeat: no-repeat;
     background-position: center;
     background-color: #06171E;
+}
+
+@media(max-width: 767px) {
+    h1 {
+        font-size: 48px;
+    }
+
+    header {
+        display: flex;
+        padding: 0;
+        justify-content: center;
+        background-color: #09212A;
+        height: 80px;
+    }
+
+    header img {
+        height: 32px;
+        width: 168px;
+    }
+}
+
+@media(max-width: 550px) {
+    #resp_image.overlay {
+        display: flex;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        position: absolute;
+        width: 100vw;
+        min-width: 320px;
+        background-color: #06171E;
+        border: 2px solid #124658;
+        border-radius: 24px;
+        flex-direction: column;
+    }
+
+    #resp_image.overlay img {
+        margin: 0 auto;
+        padding-top: 20px;
+        display: flex;
+        object-fit: cover;
+        width: 80%;
+        height: 380px;
+    }
+
+    .overlayHeader {
+        margin-top: 80px;
+        padding: 0 10%;
+        display: flex;
+        justify-content: space-between;
+        flex-direction: row;
+        align-items: center;
+
+    }
+
+    .overlayClose img {
+        width: 32px !important;
+        height: 32px !important;
+    }
+
+    .overlayClose img:hover {
+        cursor: pointer;
+    }
+
+    .overlayArows {
+        font-size: 24px;
+        padding: 10px;
+        display: flex;
+        align-items: center;
+    }
+
+    .overlayArows img {
+        width: 60px !important;
+        height: 60px !important;
+    }
+
+    .overlayArows img:hover {
+        cursor: pointer;
+        filter: brightness(1.5);
+    }
+
+    .counter {
+        margin-top: 24px;
+    }
+
+    footer {
+        display: flex;
+        height: 120px;
+        background-image: url(img/Footer.png);
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: center;
+        background-color: #06171E;
+    }
 }

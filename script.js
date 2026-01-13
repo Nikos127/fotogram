@@ -86,8 +86,7 @@ function getOverlayContent(i, l) {
         </div>`
 }
 
-function overlay_close(event) {
+function overlay_close() {
     document.getElementById('resp_image').classList.remove('overlay');
     document.getElementById('cloudy').classList.remove('cloudy');
-    event.stopPropagation();
 }
