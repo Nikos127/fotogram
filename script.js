@@ -59,7 +59,7 @@ function prewFoto(i, l) {
 
 function resp_overlay(index) {
     document.getElementById('resp_image').classList.add('overlay');
-    document.getElementById('cloudy').classList.add('cloudy');
+    // document.getElementById('cloudy').classList.add('cloudy');
     document.getElementById('overflow').classList.add('overlay');
     event.stopPropagation();
 
