@@ -31,40 +31,39 @@ let fotos = [
 let currentFoto = 0;
 
 function fotosFiltered(index) {
-    window.scrollTo(0, 0);
-    resp_overlay(index);
+    respOverlay(index);
 }
 
 function nextFoto(i, l) {
     if (i >= l - 1) {
         i = 0;
-        resp_overlay(i);
+        respOverlay(i);
     }
     else {
         i++;
-        resp_overlay(i);
+        respOverlay(i);
     }
 }
 
 function prewFoto(i, l) {
     if (i <= 0) {
         i = 11;
-        resp_overlay(i);
+        respOverlay(i);
     }
     else {
         i--;
-        resp_overlay(i);
+        respOverlay(i);
     }
 }
 
-function resp_overlay(index) {
-    document.getElementById('resp_image').classList.add('overlay');
+function respOverlay(index) {
+    document.getElementById('respImage').classList.add('overlay');
     document.getElementById('cloudy').classList.add('cloudy');
     document.getElementById('overflow').classList.add('overlay');
     event.stopPropagation();
 
 
-    let overlayRef = document.getElementById('resp_image');
+    let overlayRef = document.getElementById('respImage');
     overlayRef.innerHTML = "";
     let i = index;
     let l = fotos.length;
@@ -81,29 +80,29 @@ function getOverlayContent(i, l) {
                     ${fotoTitles[i]}
                 </h2>
                 <div class="overlayClose">
-                    <img onclick="overlay_close()" src="./img/Close icon.png" alt=""></img>
+                    <img onclick="overlayClose()" src="./img/Close icon.png" alt=""></img>
                 </div>
             </div>
             <div>
                 <img src="${fotos[i]}" alt=""></img>
             </div>
             <div class="overlayArrows">
-                <img onclick="prewFoto(${[i]},${[l]})" src="./img/Button left.png" alt="arrow_point_left">
+                <img onclick="prewFoto(${[i]},${[l]})" src="./img/Button left.png" alt="arrowPointLeft">
                 <p class="counter">${[i + 1]}/${[l]}</p>
-                <img onclick="nextFoto(${[i]},${[l]})" src="./img/Button right.png" alt="arrow_point_right">
+                <img onclick="nextFoto(${[i]},${[l]})" src="./img/Button right.png" alt="arrowPointRight">
             </div>
         </div>`
 }
 
-function overlay_close() {
-    document.getElementById('resp_image').classList.remove('overlay');
+function overlayClose() {
+    document.getElementById('respImage').classList.remove('overlay');
     document.getElementById('cloudy').classList.remove('cloudy');
     document.getElementById('overflow').classList.remove('overlay');
 }
 
 document.addEventListener('keydown', function (x) {
     if (x.key === 'Escape') {
-        overlay_close();
+        overlayClose();
     }
     else if
         (x.key === 'ArrowLeft') {
