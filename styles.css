@@ -13,9 +13,9 @@ body {
 header {
     display: flex;
     align-items: center;
-    padding-left: 100px;
     background-color: #09212A;
     height: 80px;
+    padding-left: 8vb;
 }
 
 header img {
@@ -132,10 +132,12 @@ button {
 }
 
 .overlayArrows {
+    justify-content: center;
     font-size: 24px;
     padding: 10px;
     display: flex;
     align-items: center;
+    gap: 40px;
 }
 
 .overlayArrows img {
@@ -150,6 +152,9 @@ button {
 
 .counter {
     margin-top: 24px;
+    width: 60px;
+    display: flex;
+    justify-content: center;
 }
 
 footer {
