@@ -84,7 +84,8 @@ button {
     object-fit: cover;
 }
 
-.content img:hover {
+.content img:hover,
+.content img:focus {
     cursor: pointer;
     filter: brightness(1.2);
 }
