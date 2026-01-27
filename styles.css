@@ -21,7 +21,8 @@ header {
 
 .logo {
     background-color: #09212A;
-    width: 1920px;
+    width: 1440px;
+    margin-left: 80px;
 }
 
 header img {
