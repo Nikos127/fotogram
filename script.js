@@ -108,7 +108,7 @@ function getOverlayContent(index, length) {
                 </div>
             </div>
             <div class="overlayPhoto">
-                <img src="${fotos[index]}" alt=""></img>
+                <img src="${photos[index]}" alt=""></img>
             </div>
             <div class="overlayArrows">
                 <img onclick="scrollPhoto(${index},${length}, 'prev')" onkeydown="if(event.key==='Enter') scrollPhoto(${index},${length}, 'prev')" src="./img/Button left.png" alt="arrowPointLeft" tabindex="0">
@@ -134,10 +134,10 @@ document.addEventListener('keydown', function (x) {
     }
     else if
         (x.key === 'ArrowLeft') {
-        scrollPhoto(currentFoto, fotos.length, 'prev');
+        scrollPhoto(currentPhoto, photos.length, 'prev');
     }
     else if
         (x.key === 'ArrowRight') {
-        scrollPhoto(currentFoto, fotos.length, 'next');
+        scrollPhoto(currentPhoto, photos.length, 'next');
     }
 })
