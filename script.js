@@ -1,4 +1,4 @@
-let fotoTitles = [
+let photoTitles = [
     "Blue Cave Serenity",
     "Sunlit Seaside Chair",
     "Essence of Greece",
@@ -13,7 +13,7 @@ let fotoTitles = [
     "Stone Windmill Above the Aegean"
 ]
 
-let fotos = [
+let photos = [
     "./img/blue-cave-590336_1280.jpg",
     "./img/chair-2736513_1280.jpg",
     "./img/greece-6821802_1280.jpg",
@@ -28,11 +28,13 @@ let fotos = [
     "./img/zakynthos-1583095_1280.jpg"
 ]
 
-let currentFoto = 0;
+let currentPhoto = 0;
 
-function fotosFiltered(index) {
+function photosFiltered(index) {
     respOverlay(index);
 }
+
+
 
 function scrollPhoto(index, length, direction) {
     if (direction === 'next') {
@@ -77,17 +79,29 @@ function respOverlay(index) {
 
     let overlayRef = document.getElementById('respImage');
     overlayRef.innerHTML = "";
-    let length = fotos.length;
-    currentFoto = index;
+    let length = photos.length;
+    currentPhoto = index;
     overlayRef.innerHTML = getOverlayContent(index, length);
 }
+function init() {
+    let galleryRef = document.getElementById('imageGallery');
+    galleryRef.innerHTML = "";
+    for (let index = 0; index < photos.length; index++) {
+        galleryRef.innerHTML += getGalleryContent(index);
+    }
+}
 
-
+function getGalleryContent(index) {
+    return `<button aria-label="Foto öffnen" aria-describedby="Öffnet selektiertes Foto" onclick="photosFiltered(${index})" onkeydown="if(event.key==='Enter') photosFiltered(${index})"
+    tabindex="0">
+    <img src="${photos[index]}" alt="${photoTitles[index]}"></img>
+</button>`
+}
 
 function getOverlayContent(index, length) {
     return `<div class="overlayHeader">
                 <h2>
-                    ${fotoTitles[index]}
+                    ${photoTitles[index]}
                 </h2>
                 <div class="overlayClose">
                     <img aria-label="Schließen" aria-describedby="Schließt das Overlay" onclick="overlayClose()" onkeydown="if(event.key==='Enter') overlayClose()" src="./img/Close icon.png" alt="" tabindex="0"></img>

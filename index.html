@@ -10,7 +10,7 @@
     <script src="script.js"></script>
 </head>
 
-<body id="overflow">
+<body onload="init()" id="overflow">
     <header>
         <div class="logo">
             <img src="./img/logo.png" alt="fotogram logo">
@@ -19,66 +19,8 @@
     <main onclick="overlayClose(event)">
         <section id="cloudy" class="content">
             <h1>Greek Islands</h1>
-            <div class="images">
-                <button aria-label="Foto öffnen" aria-describedby="Öffnet selektiertes Foto" onclick="fotosFiltered(0)"
-                    tabindex="0">
-                    <img src="./img/blue-cave-590336_1280.jpg" alt="Blue Cave Serenity">
-                </button>
-
-                <button aria-label="Foto öffnen" aria-describedby="Öffnet selektiertes Foto" onclick="fotosFiltered(1)"
-                    tabindex="0">
-                    <img src="./img/chair-2736513_1280.jpg" alt="Sunlit Seaside Chair">
-                </button>
-
-                <button aria-label="Foto öffnen" aria-describedby="Öffnet selektiertes Foto" onclick="fotosFiltered(2)"
-                    tabindex="0">
-                    <img src="./img/greece-6821802_1280.jpg" alt="Essence of Greece">
-                </button>
-
-                <button aria-label="Foto öffnen" aria-describedby="Öffnet selektiertes Foto" onclick="fotosFiltered(3)"
-                    tabindex="0">
-                    <img src="./img/island-203153_1280.jpg" alt="Island Escape">
-                </button>
-
-                <button aria-label="Foto öffnen" aria-describedby="Öffnet selektiertes Foto" onclick="fotosFiltered(4)"
-                    tabindex="0">
-                    <img src="./img/blue-115762_1280.jpg" alt="Sunlit Blue Doorway">
-                </button>
-
-                <button aria-label="Foto öffnen" aria-describedby="Öffnet selektiertes Foto" onclick="fotosFiltered(5)"
-                    tabindex="0">
-                    <img src="./img/mykonos-5181484_1280.jpg" alt="Magic of Mykonos">
-                </button>
-
-                <button aria-label="Foto öffnen" aria-describedby="Öffnet selektiertes Foto" onclick="fotosFiltered(6)"
-                    tabindex="0">
-                    <img src="./img/rhodes-2088130_1280.jpg" alt="Rhodes Coastal Charm">
-                </button>
-
-                <button aria-label="Foto öffnen" aria-describedby="Öffnet selektiertes Foto" onclick="fotosFiltered(7)"
-                    tabindex="0">
-                    <img src="./img/santorin-1700274_1280.jpg" alt="Santorini Dream Coast">
-                </button>
-
-                <button aria-label="Foto öffnen" aria-describedby="Öffnet selektiertes Foto" onclick="fotosFiltered(8)"
-                    tabindex="0">
-                    <img src="./img/santorin-1788606_1280.jpg" alt="Santorini Sunset Blues">
-                </button>
-
-                <button aria-label="Foto öffnen" aria-describedby="Öffnet selektiertes Foto" onclick="fotosFiltered(9)"
-                    tabindex="0">
-                    <img src="./img/santorini-169239_1280.jpg" alt="Santorini Cliffside Dawn">
-                </button>
-
-                <button aria-label="Foto öffnen" aria-describedby="Öffnet selektiertes Foto" onclick="fotosFiltered(10)"
-                    tabindex="0">
-                    <img src="./img/santorini-86815_1280.jpg" alt="Aegean Archway View">
-                </button>
-
-                <button aria-label="Foto öffnen" aria-describedby="Öffnet selektiertes Foto" onclick="fotosFiltered(11)"
-                    tabindex="0">
-                    <img src="./img/zakynthos-1583095_1280.jpg" alt="Stone Windmill Above the Aegean">
-                </button>
+            <div id="imageGallery" class="images">
+                
         </section>
 
     </main>
